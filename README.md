@@ -13,16 +13,26 @@
 ## Primer paso: Conocer el Dataset
 
 ```mysql
+PRAGMA table_info(titles)
 SELECT COUNT(*) FROM titles
 SELECT type, COUNT (*) FROM titles GROUP BY type
 SELECT MIN (release_year) AS primer_año, MAX (release_year) AS ultimo_año FROM titles
 
 ```
+### info de la tabla genereal
+<img width="474" height="426" alt="image" src="https://github.com/user-attachments/assets/5c06703f-dd1e-482b-a30c-d3c970678b79" />
+
+### Cantidad de registros
 <img width="134" height="65" alt="image" src="https://github.com/user-attachments/assets/179ecf06-4e98-43d0-aa05-bb84bb36008b" />
+
+### Cantidad de series (SHOWS) y peliculas (MOVIES)
 <img width="190" height="84" alt="image" src="https://github.com/user-attachments/assets/d2b207f2-641e-44ec-9a39-d53e96ec6a7b" />
+
+### Años disponibles
 <img width="197" height="59" alt="image" src="https://github.com/user-attachments/assets/faa22ce9-d1e7-40c5-a406-c25ea365c0e4" />
 
 
+En general se puede ver que dataset contiene 15 variables, Con 5.850 registros (filas) y los años de referencia de lanzamientos de las películos y series están entre 1945 y 2022, con 3.744 peliculas y 2.106 series. 
 
 ## 1. Which movies and shows on Netflix ranked in the top 10 and bottom 10 based on their IMDB scores?
 
