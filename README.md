@@ -18,7 +18,7 @@
 SELECT title, 
 type, 
 imdb_score
-FROM shows_movies.titles
+FROM titles
 WHERE imdb_score >= 8.0
 AND type = 'MOVIE'
 ORDER BY imdb_score DESC
@@ -35,7 +35,7 @@ Result:
 SELECT title, 
 type, 
 imdb_score
-FROM shows_movies.titles
+FROM titles
 WHERE imdb_score >= 8.0
 AND type = 'SHOW'
 ORDER BY imdb_score DESC
