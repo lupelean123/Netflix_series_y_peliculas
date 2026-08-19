@@ -12,6 +12,7 @@
 
 ## Questions I Wanted To Answer From the Dataset:
 ## 1. Which movies and shows on Netflix ranked in the top 10 and bottom 10 based on their IMDB scores?
+
 - Top 10 Movies
 ```mysql
 SELECT title, 
@@ -25,7 +26,9 @@ LIMIT 10
 ```
 Result: 
 
-![Q1](https://i.ibb.co/6mQWCw9/Screen-Shot-2023-07-09-at-9-38-11-PM.png)
+<p align="center">
+  <img src="imagenes/top 10 peliculas.png" alt="Netflix" width="400"/>
+</p>
 
 - Top 10 Shows
 ```mysql
@@ -40,4 +43,6 @@ LIMIT 10
 ```
 Result: 
 
-![Q2](https://i.ibb.co/QppHsN2/Screen-Shot-2023-07-09-at-9-45-58-PM.png)
+<p align="center">
+  <img src="imagenes/top 10 series.png" alt="Netflix" width="400"/>
+</p
