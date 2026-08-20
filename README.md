@@ -100,6 +100,8 @@ WHERE type = 'MOVIE' AND release_year > 2015 AND production_countries = "['US']"
 ORDER BY tmdb_score DESC
 LIMIT 20
 ```
+<img width="886" height="274" alt="image" src="https://github.com/user-attachments/assets/61df5ded-bd25-40dd-b09a-665d3ca34db9" />
+
 
 ## Conclusion 
 By exploring .......... adasdsads. Fin. 
