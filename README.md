@@ -10,16 +10,16 @@
 
 - **Como puedo resolver el problema:** Para ayudar a Netflix a obtener información valiosa a partir de su extenso conjunto de datos sobre películas y series, utilizaré SQLite para extraer información relevante y realizar análisis detallados. Al aprovechar las funciones de SQL, podré identificar métricas clave como las calificaciones de los espectadores, las tendencias de popularidad, las preferencias de género y los patrones de audiencia.
 
-## Primer paso: Conocer el Dataset
+## Primer paso: Exploración del Dataset
 
 ```mysql
-PRAGMA table_info(titles)
-SELECT COUNT(*) FROM titles
-SELECT type, COUNT (*) FROM titles GROUP BY type
-SELECT MIN (release_year) AS primer_año, MAX (release_year) AS ultimo_año FROM titles
+PRAGMA table_info(titles) -- Info de la tabla general
+SELECT COUNT(*) FROM titles -- Cantidad de registros
+SELECT type, COUNT (*) FROM titles GROUP BY type -- Cantidad de series y peliculas
+SELECT MIN (release_year) AS primer_año, MAX (release_year) AS ultimo_año FROM titles -- Años disponibles
 
 ```
-### info de la tabla genereal
+### info de la tabla general
 <img width="474" height="426" alt="image" src="https://github.com/user-attachments/assets/5c06703f-dd1e-482b-a30c-d3c970678b79" />
 
 ### Cantidad de registros
@@ -34,9 +34,10 @@ SELECT MIN (release_year) AS primer_año, MAX (release_year) AS ultimo_año FROM
 
 En general se puede ver que dataset contiene 15 variables, Con 5.850 registros (filas) y los años de referencia de lanzamientos de las películos y series están entre 1945 y 2022, con 3.744 peliculas y 2.106 series. 
 
-## 1. Which movies and shows on Netflix ranked in the top 10 and bottom 10 based on their IMDB scores?
+## Ranking de peliculas y series del dataset
 
-- Top 10 Movies
+### top 10 peliculas
+
 ```mysql
 SELECT title, 
 type, 
@@ -47,13 +48,11 @@ AND type = 'MOVIE'
 ORDER BY imdb_score DESC
 LIMIT 10
 ```
-Result: 
 
-<p align="center">
-  <img src="imagenes/top 10 peliculas.png" alt="Netflix" width="400"/>
-</p>
+<img width="468" height="296" alt="image" src="https://github.com/user-attachments/assets/5aef09aa-8351-42f1-b76f-8e48499a19f0" />
 
-- Top 10 Shows
+### top 10 series 
+
 ```mysql
 SELECT title, 
 type, 
@@ -64,27 +63,43 @@ AND type = 'SHOW'
 ORDER BY imdb_score DESC
 LIMIT 10
 ```
-Result: 
 
-<p align="center">
-  <img src="imagenes/top 10 series.png" alt="Netflix" width="400"/>
-</p
+<img width="377" height="296" alt="image" src="https://github.com/user-attachments/assets/70a433e3-5483-481a-9013-6e343babe5c9" />
 
+### top 10 peores peliculas
 
-## 2. How many movieesss... ? 
+````mysql
+SELECT title, 
+type, 
+imdb_score
+FROM titles
+WHERE type = 'MOVIE' AND imdb_score >= 0
+ORDER BY imdb_score ASC
+LIMIT 10
+````
+<img width="431" height="293" alt="image" src="https://github.com/user-attachments/assets/3696daf1-cce8-40dd-947b-21f5ab2ab2c5" />
+
+### top 10 peores series
 
 ```mysql
-SELECT CONCAT(FLOOR(release_year / 10) * 10, 's') AS decade,
-	COUNT(*) AS movies_shows_count
-FROM shows_movies.titles
-WHERE release_year >= 1940
-GROUP BY CONCAT(FLOOR(release_year / 10) * 10, 's')
-ORDER BY decade;
+SELECT title, 
+type, 
+imdb_score
+FROM titles
+WHERE type = 'SHOW' AND imdb_score >= 0
+ORDER BY imdb_score ASC
+LIMIT 10
 ```
-Result: 
+<img width="434" height="296" alt="image" src="https://github.com/user-attachments/assets/613ded1a-62e5-4a00-9a38-88ab2c90ce21" />
 
-![Q5](https://i.ibb.co/8dTzVZ3/Screen-Shot-2023-07-09-at-10-02-18-PM.png)
-
+explorando peliculas de interes:
+```mysql
+SELECT title, type, release_year, genres, production_countries, imdb_score, tmdb_score
+FROM titles
+WHERE type = 'MOVIE' AND release_year > 2015 AND production_countries = "['US']"
+ORDER BY tmdb_score DESC
+LIMIT 20
+```
 
 ## Conclusion 
 By exploring .......... adasdsads. Fin. 
