@@ -103,5 +103,12 @@ LIMIT 20
 <img width="886" height="274" alt="image" src="https://github.com/user-attachments/assets/61df5ded-bd25-40dd-b09a-665d3ca34db9" />
 
 
+ 
+
+Traducción realizada con la versión gratuita del traductor DeepL.com
+
 ## Conclusion 
-By exploring .......... adasdsads. Fin. 
+
+La calificación de IMDb es un indicador ampliamente reconocido de la calidad general y la popularidad de una película o serie. Las 10 mejores películas y series se destacaron por sus excepcionales calificaciones en IMDb, lo que indica que gozan de gran reconocimiento entre los espectadores. Es probable que estos títulos hayan recibido gran reconocimiento y críticas positivas, lo que ha contribuido a su alta posición en el catálogo de Netflix.
+Por otro lado, las 10 películas y series con peor desempeño obtuvieron puntuaciones más bajas en IMDb. Si bien es posible que estas propuestas no hayan tenido tanto impacto en el público, es importante señalar que hay muchos factores que influyen en estas clasificaciones, tales como las preferencias individuales, una trama débil, una actuación deficiente y una producción de baja calidad.
+ Estos hallazgos pueden brindar información valiosa para los espectadores que buscan contenido altamente calificado y pueden servir como base para análisis posteriores y la toma de decisiones en las recomendaciones de Netflix para la audiencia.
