@@ -8,7 +8,7 @@
 
 - **Problema de negocio:** Netflix quiere recabar información de sus series y películas para sus suscriptores a través de sus conjuntos de datos. El problema es que están trabajando con una cantidad excesiva de datos y no saben cómo analizarlos de manera efectiva ni cómo extraer información significativa de ellos.
 
-- **Como puedo resolver el problema:** Para ayudar a Netflix a obtener información valiosa a partir de su extenso conjunto de datos sobre películas y series, utilizaré SQLite para explorar y extraer información relevante y poder hacer un análisis detallados. Al aprovechar las funciones de SQL, podré hacer un análisis exploratorio para conocer el dataset y luego ver métricas claves como las calificaciones de los espectadores, y así poder sacar una conclusión.
+- **Como puedo resolver el problema:** Para ayudar a Netflix a obtener información valiosa a partir de su extenso conjunto de datos sobre películas y series, utilizaré SQLite para explorar y extraer información relevante y poder hacer un análisis detallado. Al aprovechar las funciones de SQL, podré hacer un análisis exploratorio para conocer el dataset y luego ver métricas claves como las calificaciones de los espectadores, y así poder sacar una conclusión.
 
 ## Exploración del Dataset
 
@@ -32,7 +32,7 @@ SELECT MIN (release_year) AS primer_año, MAX (release_year) AS ultimo_año FROM
 <img width="197" height="59" alt="image" src="https://github.com/user-attachments/assets/faa22ce9-d1e7-40c5-a406-c25ea365c0e4" />
 
 
-En general se puede ver que dataset contiene 15 variables, Con 5.850 registros (filas) y los años de referencia de lanzamientos de las películas y series están entre 1945 y 2022, con un total de 3.744 peliculas y 2.106 series. 
+En general se puede ver que dataset contiene 15 variables, Con 5.850 registros y los años de referencia de lanzamientos de las películas y series están entre 1945 y 2022, con un total de 3.744 peliculas y 2.106 series. 
 
 ## Ranking de peliculas y series del dataset
 
