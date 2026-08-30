@@ -8,7 +8,7 @@
 
 - **Problema de negocio:** Netflix quiere recabar información de sus series y películas para sus suscriptores a través de sus conjuntos de datos. El problema es que están trabajando con una cantidad excesiva de datos y no saben cómo analizarlos de manera efectiva ni cómo extraer información significativa de ellos.
 
-- **Como puedo resolver el problema:** Para ayudar a Netflix a obtener información valiosa a partir de su extenso conjunto de datos sobre películas y series, utilizaré SQLite para explorar y extraer información relevante y poder hacer un análisis detallados. Al aprovechar las funciones de SQL, podré una análisis exploratorio para conocer el dataset y luego ver métricas claves como las calificaciones de los espectadores, y así poder sacar una conclusión.
+- **Como puedo resolver el problema:** Para ayudar a Netflix a obtener información valiosa a partir de su extenso conjunto de datos sobre películas y series, utilizaré SQLite para explorar y extraer información relevante y poder hacer un análisis detallados. Al aprovechar las funciones de SQL, podré hacer un análisis exploratorio para conocer el dataset y luego ver métricas claves como las calificaciones de los espectadores, y así poder sacar una conclusión.
 
 ## Exploración del Dataset
 
