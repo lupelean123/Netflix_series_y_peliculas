@@ -32,7 +32,7 @@ SELECT MIN (release_year) AS primer_año, MAX (release_year) AS ultimo_año FROM
 <img width="197" height="59" alt="image" src="https://github.com/user-attachments/assets/faa22ce9-d1e7-40c5-a406-c25ea365c0e4" />
 
 
-En general se puede ver que dataset contiene 15 variables, Con 5.850 registros (filas) y los años de referencia de lanzamientos de las películos y series están entre 1945 y 2022, con 3.744 peliculas y 2.106 series. 
+En general se puede ver que dataset contiene 15 variables, Con 5.850 registros (filas) y los años de referencia de lanzamientos de las películas y series están entre 1945 y 2022, con un total de 3.744 peliculas y 2.106 series. 
 
 ## Ranking de peliculas y series del dataset
 
