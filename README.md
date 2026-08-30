@@ -6,11 +6,11 @@
 
 **herramientas usadas:** Sqlite3
 
-- **Problema de negocio:** Netflix quiere recabar información útil sobre sus series y películas para sus suscriptores a través de sus conjuntos de datos. El problema es que están trabajando con una cantidad excesiva de datos y no saben cómo analizarlos de manera efectiva ni cómo extraer información significativa de ellos. Necesitan una solución de análisis de datos robusta y escalable para manejar la cantidad de datos y descubrir patrones y tendencias valiosas.
+- **Problema de negocio:** Netflix quiere recabar información de sus series y películas para sus suscriptores a través de sus conjuntos de datos. El problema es que están trabajando con una cantidad excesiva de datos y no saben cómo analizarlos de manera efectiva ni cómo extraer información significativa de ellos.
 
-- **Como puedo resolver el problema:** Para ayudar a Netflix a obtener información valiosa a partir de su extenso conjunto de datos sobre películas y series, utilizaré SQLite para extraer información relevante y realizar análisis detallados. Al aprovechar las funciones de SQL, podré identificar métricas clave como las calificaciones de los espectadores, las tendencias de popularidad, las preferencias de género y los patrones de audiencia.
+- **Como puedo resolver el problema:** Para ayudar a Netflix a obtener información valiosa a partir de su extenso conjunto de datos sobre películas y series, utilizaré SQLite para explorar y extraer información relevante y poder hacer un análisis detallados. Al aprovechar las funciones de SQL, podré una análisis exploratorio para conocer el dataset y luego ver métricas claves como las calificaciones de los espectadores, y así poder sacar una conclusión.
 
-## Primer paso: Exploración del Dataset
+## Exploración del Dataset
 
 ```mysql
 PRAGMA table_info(titles) -- Info de la tabla general
@@ -90,25 +90,16 @@ WHERE type = 'SHOW' AND imdb_score >= 0
 ORDER BY imdb_score ASC
 LIMIT 10
 ```
-<img width="434" height="296" alt="image" src="https://github.com/user-attachments/assets/613ded1a-62e5-4a00-9a38-88ab2c90ce21" />
-
-explorando peliculas de interes:
-```mysql
-SELECT title, type, release_year, genres, production_countries, imdb_score, tmdb_score
-FROM titles
-WHERE type = 'MOVIE' AND release_year > 2015 AND production_countries = "['US']"
-ORDER BY tmdb_score DESC
-LIMIT 20
-```
-<img width="886" height="274" alt="image" src="https://github.com/user-attachments/assets/61df5ded-bd25-40dd-b09a-665d3ca34db9" />
-
-
- 
-
-Traducción realizada con la versión gratuita del traductor DeepL.com
+<img width="434" height="296" alt="image" src="https://github.com/user-attachments/assets/613ded1a-62e5-4a00-9a38-88ab2c90ce21" /> 
 
 ## Conclusion 
 
+Las siglas IMDb significan Internet Movie Database (en español, Base de Datos de Películas en Internet), una plataforma digital que funciona como la base de datos en línea para consultar información, calificaciones y reseñas sobre películas, series de televisión, actores y videojuegos.
+
+Los usuarios registrados en IMDb pueden otorgar una calificación (del 1 al 10) a cada título estrenado que se encuentra en la base de datos. Las calificaciones individuales se agregan y se resumen en una única calificación de IMDb, visible en la página principal del título.
+
 La calificación de IMDb es un indicador ampliamente reconocido de la calidad general y la popularidad de una película o serie. Las 10 mejores películas y series se destacaron por sus excepcionales calificaciones en IMDb, lo que indica que gozan de gran reconocimiento entre los espectadores. Es probable que estos títulos hayan recibido gran reconocimiento y críticas positivas, lo que ha contribuido a su alta posición en el catálogo de Netflix.
-Por otro lado, las 10 películas y series con peor desempeño obtuvieron puntuaciones más bajas en IMDb. Si bien es posible que estas propuestas no hayan tenido tanto impacto en el público, es importante señalar que hay muchos factores que influyen en estas clasificaciones, tales como las preferencias individuales, una trama débil, una actuación deficiente y una producción de baja calidad.
+
+Por otro lado, las 10 películas y series con peor desempeño obtuvieron puntuaciones más bajas en IMDb. Si bien es posible que estas propuestas no hayan tenido tanto impacto en el público, cabe señalar que hay muchos factores que influyen en estas clasificaciones, tales como las preferencias individuales, una trama débil, una actuación deficiente y una producción de baja calidad.
+
  Estos hallazgos pueden brindar información valiosa para los espectadores que buscan contenido altamente calificado y pueden servir como base para análisis posteriores y la toma de decisiones en las recomendaciones de Netflix para la audiencia.
