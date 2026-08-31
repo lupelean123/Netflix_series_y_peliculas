@@ -34,63 +34,62 @@ SELECT MIN (release_year) AS primer_año, MAX (release_year) AS ultimo_año FROM
 
 En general se puede ver que dataset contiene 15 variables, Con 5.850 registros y los años de referencia de lanzamientos de las películas y series están entre 1945 y 2022, con un total de 3.744 peliculas y 2.106 series. 
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Ranking de peliculas y series del dataset
 
-### top 10 peliculas
+### Top 10 películas de acción
 
 ```mysql
-SELECT title, 
-type, 
-imdb_score
+SELECT title, type, release_year, genres, production_countries, imdb_score
 FROM titles
-WHERE imdb_score >= 8.0
-AND type = 'MOVIE'
+WHERE (genres LIKE '%''action''%')
+   AND type = 'MOVIE' AND production_countries LIKE '%US%'
 ORDER BY imdb_score DESC
 LIMIT 10
 ```
 
-<img width="468" height="296" alt="image" src="https://github.com/user-attachments/assets/5aef09aa-8351-42f1-b76f-8e48499a19f0" />
+<img width="977" height="298" alt="image" src="https://github.com/user-attachments/assets/6b3fcf2e-af9d-4b79-ae8d-4ab37b25138b" />
 
-### top 10 series 
+### Top 10 películas de terror y/o suspenso
 
 ```mysql
-SELECT title, 
-type, 
-imdb_score
+SELECT title, type, release_year, genres, production_countries, imdb_score
 FROM titles
-WHERE imdb_score >= 8.0
-AND type = 'SHOW'
+WHERE (genres LIKE '%''horror''%')
+   AND type = 'MOVIE' AND production_countries LIKE '%US%'
 ORDER BY imdb_score DESC
 LIMIT 10
 ```
 
-<img width="377" height="296" alt="image" src="https://github.com/user-attachments/assets/70a433e3-5483-481a-9013-6e343babe5c9" />
+<img width="976" height="295" alt="image" src="https://github.com/user-attachments/assets/e14dacc8-67b8-4cbf-a708-a1c4098dfa66" />
 
-### top 10 peores peliculas
-
-````mysql
-SELECT title, 
-type, 
-imdb_score
-FROM titles
-WHERE type = 'MOVIE' AND imdb_score >= 0
-ORDER BY imdb_score ASC
-LIMIT 10
-````
-<img width="431" height="293" alt="image" src="https://github.com/user-attachments/assets/3696daf1-cce8-40dd-947b-21f5ab2ab2c5" />
-
-### top 10 peores series
+### Top 10 películas de anime
 
 ```mysql
-SELECT title, 
-type, 
-imdb_score
+SELECT title, type, release_year, genres, production_countries, imdb_score
 FROM titles
-WHERE type = 'SHOW' AND imdb_score >= 0
-ORDER BY imdb_score ASC
+WHERE (genres LIKE '%''animation''%')
+   AND type = 'MOVIE' AND production_countries LIKE '%US%'
+ORDER BY imdb_score DESC
 LIMIT 10
 ```
-<img width="434" height="296" alt="image" src="https://github.com/user-attachments/assets/613ded1a-62e5-4a00-9a38-88ab2c90ce21" /> 
+
+<img width="991" height="296" alt="image" src="https://github.com/user-attachments/assets/eebf172f-f9e4-4b9e-9557-aceca7ffb39c" />
+
+### Top 10 series de anime
+
+```mysql
+SELECT title, type, release_year, genres, production_countries, imdb_score
+FROM titles
+WHERE (genres LIKE '%''animation''%')
+   AND type = 'SHOW' AND production_countries LIKE '%US%'
+ORDER BY imdb_score DESC
+LIMIT 10
+```
+
+<img width="940" height="297" alt="image" src="https://github.com/user-attachments/assets/16ebdd7b-cf3a-4e72-9c87-7c93738612f9" />
+
 
 ## Conclusion 
 
@@ -99,7 +98,5 @@ Las siglas IMDb significan Internet Movie Database (en español, Base de Datos d
 Los usuarios registrados en IMDb pueden otorgar una calificación (del 1 al 10) a cada título estrenado que se encuentra en la base de datos. Las calificaciones individuales se agregan y se resumen en una única calificación de IMDb, visible en la página principal del título.
 
 La calificación de IMDb es un indicador ampliamente reconocido de la calidad general y la popularidad de una película o serie. Las 10 mejores películas y series se destacaron por sus excepcionales calificaciones en IMDb, lo que indica que gozan de gran reconocimiento entre los espectadores. Es probable que estos títulos hayan recibido gran reconocimiento y críticas positivas, lo que ha contribuido a su alta posición en el catálogo de Netflix.
-
-Por otro lado, las 10 películas y series con peor desempeño obtuvieron puntuaciones más bajas en IMDb. Si bien es posible que estas propuestas no hayan tenido tanto impacto en el público, cabe señalar que hay muchos factores que influyen en estas clasificaciones, tales como las preferencias individuales, una trama débil, una actuación deficiente y una producción de baja calidad.
 
  Estos hallazgos pueden brindar información valiosa para los espectadores que buscan contenido altamente calificado y pueden servir como base para análisis posteriores y la toma de decisiones en las recomendaciones de Netflix para la audiencia.
