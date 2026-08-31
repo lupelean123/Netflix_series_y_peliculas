@@ -6,7 +6,7 @@
 
 **herramientas usadas:** Sqlite3
 
-- **Problema de negocio:** Netflix quiere recabar información de sus series y películas para sus suscriptores a través de sus conjuntos de datos disponibles hasta julio de 2022. El problema es que están trabajando con una cantidad excesiva de datos y no saben cómo analizarlos de manera efectiva ni cómo extraer información significativa de ellos.
+- **Problema de negocio:** Netflix quiere recabar información de sus series y películas que hayan sido producidas al menos en EEUU para sus suscriptores a través de sus conjuntos de datos disponibles hasta julio de 2022. El problema es que están trabajando con una cantidad excesiva de datos y no saben cómo analizarlos de manera efectiva ni cómo extraer información significativa de ellos.
 
 - **Como puedo resolver el problema:** Para obtener información valiosa a partir de su extenso conjunto de datos sobre películas y series, utilizaré SQLite para explorar y extraer información relevante y poder hacer un análisis detallado. Al aprovechar las funciones de SQLite, podré hacer un análisis exploratorio para conocer el dataset y luego ver métricas claves como las calificaciones de los espectadores, y así poder sacar una conclusión.
 
