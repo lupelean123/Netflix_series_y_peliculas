@@ -6,7 +6,7 @@
 
 **herramientas usadas:** Sqlite3
 
-- **Problema de negocio:** Netflix quiere recabar información de sus series y películas para sus suscriptores a través de sus conjuntos de datos. El problema es que están trabajando con una cantidad excesiva de datos y no saben cómo analizarlos de manera efectiva ni cómo extraer información significativa de ellos.
+- **Problema de negocio:** Netflix quiere recabar información de sus series y películas para sus suscriptores a través de sus conjuntos de datos disponibles hasta julio de 2022. El problema es que están trabajando con una cantidad excesiva de datos y no saben cómo analizarlos de manera efectiva ni cómo extraer información significativa de ellos.
 
 - **Como puedo resolver el problema:** Para obtener información valiosa a partir de su extenso conjunto de datos sobre películas y series, utilizaré SQLite para explorar y extraer información relevante y poder hacer un análisis detallado. Al aprovechar las funciones de SQLite, podré hacer un análisis exploratorio para conocer el dataset y luego ver métricas claves como las calificaciones de los espectadores, y así poder sacar una conclusión.
 
@@ -97,6 +97,6 @@ Las siglas IMDb significan Internet Movie Database (en español, Base de Datos d
 
 Los usuarios registrados en IMDb pueden otorgar una calificación (del 1 al 10) a cada título estrenado que se encuentra en la base de datos. Las calificaciones individuales se agregan y se resumen en una única calificación de IMDb, visible en la página principal del título.
 
-La calificación de IMDb es un indicador ampliamente reconocido de la calidad general y la popularidad de una película o serie. Las 10 mejores películas y series se destacaron por sus excepcionales calificaciones en IMDb, lo que indica que gozan de gran reconocimiento entre los espectadores. Es probable que estos títulos hayan recibido gran reconocimiento y críticas positivas, lo que ha contribuido a su alta posición en el catálogo de Netflix.
+La calificación de IMDb es un indicador ampliamente reconocido de la calidad general y la popularidad de una película o serie. Las 10 mejores películas y series en sus distintas categorías, se destacaron por sus excepcionales calificaciones en IMDb, lo que indica que gozan de gran reconocimiento entre los espectadores. Es probable que estos títulos hayan recibido gran reconocimiento y críticas positivas, lo que ha contribuido a su alta posición en el catálogo de Netflix.
 
  Estos hallazgos pueden brindar información valiosa para los espectadores que buscan contenido altamente calificado y pueden servir como base para análisis posteriores y la toma de decisiones en las recomendaciones de Netflix para la audiencia.
